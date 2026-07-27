@@ -1,8 +1,5 @@
 import re
-import spacy
 
-# Load spaCy English model
-nlp = spacy.load("en_core_web_sm")
 
 # =====================================================
 # TECHNICAL SKILLS DATABASE
@@ -10,9 +7,7 @@ nlp = spacy.load("en_core_web_sm")
 
 SKILLS = [
 
-    # --------------------------
     # Programming Languages
-    # --------------------------
     "python",
     "java",
     "c",
@@ -29,9 +24,7 @@ SKILLS = [
     "scala",
     "r",
 
-    # --------------------------
     # Frontend
-    # --------------------------
     "html",
     "css",
     "bootstrap",
@@ -43,9 +36,7 @@ SKILLS = [
     "next.js",
     "jquery",
 
-    # --------------------------
     # Backend
-    # --------------------------
     "django",
     "flask",
     "fastapi",
@@ -57,9 +48,7 @@ SKILLS = [
     "laravel",
     "asp.net",
 
-    # --------------------------
     # Databases
-    # --------------------------
     "sql",
     "mysql",
     "postgresql",
@@ -69,17 +58,13 @@ SKILLS = [
     "redis",
     "firebase",
 
-    # --------------------------
     # Version Control
-    # --------------------------
     "git",
     "github",
     "gitlab",
     "bitbucket",
 
-    # --------------------------
     # DevOps & Cloud
-    # --------------------------
     "docker",
     "kubernetes",
     "jenkins",
@@ -89,9 +74,7 @@ SKILLS = [
     "azure",
     "gcp",
 
-    # --------------------------
     # AI / Machine Learning
-    # --------------------------
     "machine learning",
     "deep learning",
     "artificial intelligence",
@@ -103,9 +86,7 @@ SKILLS = [
     "natural language processing",
     "nlp",
 
-    # --------------------------
     # Data Science
-    # --------------------------
     "pandas",
     "numpy",
     "scikit-learn",
@@ -113,41 +94,31 @@ SKILLS = [
     "seaborn",
     "scipy",
 
-    # --------------------------
     # Data Analytics
-    # --------------------------
     "power bi",
     "tableau",
     "excel",
 
-    # --------------------------
     # Mobile Development
-    # --------------------------
     "android",
     "flutter",
     "react native",
     "xamarin",
 
-    # --------------------------
     # Testing
-    # --------------------------
     "selenium",
     "pytest",
     "junit",
     "postman",
 
-    # --------------------------
     # Cyber Security
-    # --------------------------
     "cyber security",
     "penetration testing",
     "ethical hacking",
     "network security",
     "owasp",
 
-    # --------------------------
     # CS Fundamentals
-    # --------------------------
     "data structures",
     "algorithms",
     "operating systems",
@@ -155,9 +126,7 @@ SKILLS = [
     "dbms",
     "oops",
 
-    # --------------------------
     # APIs
-    # --------------------------
     "rest api",
     "graphql",
 ]
@@ -169,19 +138,15 @@ SKILLS = [
 
 def extract_skills(text):
     """
-    Extract technical skills from resume text or job description.
-    Uses regex word boundaries to avoid false matches like
-    'c' inside 'computer' or 'r' inside 'developer'.
+    Extract technical skills from resume text
+    or job description using regular expressions.
     """
 
     if not text:
         return []
 
-    text = text.lower()
-
-    # Process text with spaCy (useful for future enhancements)
-    doc = nlp(text)
-    clean_text = doc.text
+    # Convert text to lowercase
+    clean_text = text.lower()
 
     found_skills = set()
 
@@ -189,9 +154,15 @@ def extract_skills(text):
 
         skill_lower = skill.lower()
 
-        # Special handling for single-letter languages
+        # Special handling for single-letter programming languages
+        # Prevents matching 'c' inside words like 'computer'
+        # Prevents matching 'r' inside words like 'developer'
         if skill_lower in ["c", "r"]:
-            pattern = rf"(?<![a-zA-Z0-9]){re.escape(skill_lower)}(?![a-zA-Z0-9])"
+            pattern = (
+                rf"(?<![a-zA-Z0-9])"
+                rf"{re.escape(skill_lower)}"
+                rf"(?![a-zA-Z0-9])"
+            )
         else:
             pattern = rf"\b{re.escape(skill_lower)}\b"
 
