@@ -12,17 +12,50 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY
 # =========================================================
 
+# Production SECRET_KEY is provided through the environment.
+# Local development uses the fallback key.
 SECRET_KEY = os.environ.get(
     "SECRET_KEY",
     "django-insecure-development-only-change-this"
 )
 
+# Production: DEBUG=False
+# Local development: DEBUG=True unless explicitly overridden.
 DEBUG = os.environ.get("DEBUG", "True") == "True"
 
-ALLOWED_HOSTS = os.environ.get(
-    "ALLOWED_HOSTS",
-    "localhost,127.0.0.1"
-).split(",")
+ALLOWED_HOSTS = [
+    "phanindra2.pythonanywhere.com",
+    "localhost",
+    "127.0.0.1",
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://phanindra2.pythonanywhere.com",
+]
+
+# =========================================================
+# PRODUCTION SECURITY
+# =========================================================
+
+# Redirect HTTP to HTTPS only in production
+SECURE_SSL_REDIRECT = not DEBUG
+
+# Secure cookies only over HTTPS in production
+SESSION_COOKIE_SECURE = not DEBUG
+CSRF_COOKIE_SECURE = not DEBUG
+
+# Security headers
+SECURE_CONTENT_TYPE_NOSNIFF = True
+SECURE_BROWSER_XSS_FILTER = True
+
+# Prevent clickjacking
+X_FRAME_OPTIONS = 'DENY'
+
+# HSTS - Tell browsers to use HTTPS
+# Start with a short duration for testing
+SECURE_HSTS_SECONDS = 3600
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_PRELOAD = False
 
 
 # =========================================================
