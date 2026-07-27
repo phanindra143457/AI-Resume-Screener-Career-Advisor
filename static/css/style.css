@@ -1,0 +1,770 @@
+/* =========================================================
+   AI RESUME SCREENER & CAREER ADVISOR
+   GLOBAL PROFESSIONAL STYLES
+========================================================= */
+
+
+/* =========================================================
+   GLOBAL PAGE LAYOUT
+========================================================= */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #eef3f8;
+
+    font-family:
+        "Segoe UI",
+        Tahoma,
+        Geneva,
+        Verdana,
+        sans-serif;
+
+    color: #1e293b;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.main-content {
+    flex: 1 0 auto;
+
+    width: 100%;
+
+    background-color: #eef3f8;
+
+    min-height: calc(100vh - 70px);
+}
+
+
+/* IMPORTANT:
+   Do NOT use:
+   .container {
+       flex: 1;
+   }
+
+   It affects every Bootstrap container
+   and causes footer positioning problems.
+*/
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-brand {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.nav-link {
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ffd54f !important;
+}
+
+
+/* =========================================================
+   GENERAL CARDS
+========================================================= */
+
+.dashboard-card {
+    border: none;
+
+    border-radius: 18px;
+
+    background-color: #ffffff;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   STATISTICS
+========================================================= */
+
+.stat-number {
+    font-size: 2.2rem;
+
+    font-weight: bold;
+
+    color: #0d6efd;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.btn {
+    border-radius: 10px;
+
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.table {
+    background-color: #ffffff;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+}
+
+.table thead {
+    background-color: #0d6efd;
+
+    color: #ffffff;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f6ff;
+}
+
+
+/* =========================================================
+   ATS SCORE
+========================================================= */
+
+.score-high {
+    color: #198754;
+
+    font-weight: bold;
+
+    font-size: 1rem;
+}
+
+.score-medium {
+    color: #fd7e14;
+
+    font-weight: bold;
+}
+
+.score-low {
+    color: #dc3545;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   PAGE TITLES
+========================================================= */
+
+.page-title {
+    font-weight: 700;
+
+    margin-bottom: 30px;
+
+    color: #1e293b;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+    flex-shrink: 0;
+
+    width: 100%;
+
+    margin-top: auto;
+
+    box-shadow:
+        0 -2px 8px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   HOME PAGE PROFESSIONAL DESCRIPTION
+========================================================= */
+
+.hero-description {
+    font-size: 1.15rem;
+
+    line-height: 1.8;
+
+    color: #475569;
+
+    font-weight: 500;
+
+    max-width: 750px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    letter-spacing: 0.2px;
+}
+
+
+/* =========================================================
+   RESUME DETAIL PAGE
+========================================================= */
+
+.resume-detail-page {
+    padding-bottom: 60px;
+}
+
+
+/* =========================================================
+   RESUME HEADER
+========================================================= */
+
+.resume-header-card {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 25px;
+
+    background-color: #ffffff;
+
+    padding: 28px 32px;
+
+    margin-bottom: 25px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.resume-header-card h2 {
+    margin: 0;
+
+    font-weight: 700;
+
+    color: #1f2937;
+}
+
+.resume-subtitle {
+    margin: 8px 0 0;
+
+    color: #6b7280;
+
+    font-size: 0.95rem;
+}
+
+.header-ats-score {
+    min-width: 170px;
+
+    padding: 15px 22px;
+
+    text-align: center;
+
+    background-color: #f1f6ff;
+
+    border-radius: 14px;
+
+    border: 1px solid #dbe7ff;
+}
+
+.header-ats-score span {
+    display: block;
+
+    font-size: 0.9rem;
+
+    font-weight: 600;
+
+    color: #555;
+}
+
+.header-ats-score strong {
+    display: block;
+
+    margin-top: 5px;
+
+    font-size: 1.8rem;
+
+    color: #0d6efd;
+}
+
+
+/* =========================================================
+   SECTION NAVIGATION
+========================================================= */
+
+.section-navigation {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    padding: 20px;
+
+    margin-bottom: 25px;
+
+    background-color: #ffffff;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+
+/* =========================================================
+   SECTION BUTTONS
+========================================================= */
+
+.section-btn {
+    border: 1px solid #d9e2f2;
+
+    background-color: #f8faff;
+
+    color: #334155;
+
+    padding: 12px 18px;
+
+    border-radius: 10px;
+
+    font-size: 0.95rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+}
+
+.section-btn:hover {
+    background-color: #eaf2ff;
+
+    border-color: #0d6efd;
+
+    color: #0d6efd;
+
+    transform: translateY(-2px);
+}
+
+.section-btn.active {
+    background-color: #0d6efd;
+
+    border-color: #0d6efd;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 5px 15px rgba(13, 110, 253, 0.25);
+}
+
+
+/* =========================================================
+   SECTION CONTENT
+========================================================= */
+
+.section-content-area {
+    min-height: 350px;
+}
+
+.analysis-section {
+    display: none;
+}
+
+.analysis-section.active-section {
+    display: block;
+
+    animation:
+        sectionFadeIn 0.3s ease;
+}
+
+
+/* =========================================================
+   ANALYSIS CARD
+========================================================= */
+
+.analysis-card {
+    background-color: #ffffff;
+
+    padding: 35px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.08);
+
+    margin-bottom: 25px;
+}
+
+.analysis-card h2 {
+    margin-top: 0;
+
+    margin-bottom: 25px;
+
+    color: #1f2937;
+
+    font-weight: 700;
+}
+
+.analysis-card h3 {
+    margin-top: 20px;
+
+    margin-bottom: 15px;
+
+    color: #374151;
+}
+
+.analysis-card h4 {
+    color: #374151;
+}
+
+
+/* =========================================================
+   SECTION ICON
+========================================================= */
+
+.section-icon {
+    font-size: 2.2rem;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   BIG SCORE
+========================================================= */
+
+.big-score {
+    font-size: 4rem;
+
+    font-weight: 700;
+
+    color: #0d6efd;
+
+    text-align: center;
+
+    margin: 25px 0;
+}
+
+.score-description {
+    text-align: center;
+
+    font-size: 1.2rem;
+
+    font-weight: 600;
+
+    color: #198754;
+}
+
+.strength-level {
+    text-align: center;
+}
+
+
+/* =========================================================
+   ATS CARD
+========================================================= */
+
+.ats-card {
+    text-align: center;
+
+    padding: 50px 35px;
+}
+
+
+/* =========================================================
+   COMPLETENESS
+========================================================= */
+
+.completeness-list {
+    margin-top: 25px;
+}
+
+.completeness-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px 15px;
+
+    margin-bottom: 8px;
+
+    background-color: #f8faff;
+
+    border-radius: 10px;
+
+    font-weight: 500;
+}
+
+.status-icon {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 25px;
+
+    height: 25px;
+
+    border-radius: 50%;
+
+    font-weight: bold;
+}
+
+.status-icon.success {
+    background-color: #d1e7dd;
+
+    color: #198754;
+}
+
+.status-icon.danger {
+    background-color: #f8d7da;
+
+    color: #dc3545;
+}
+
+
+/* =========================================================
+   SKILLS
+========================================================= */
+
+.skill-list {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin: 20px 0;
+}
+
+.skill-badge {
+    display: inline-block;
+
+    padding: 8px 14px;
+
+    background-color: #eaf2ff;
+
+    color: #0d6efd;
+
+    border-radius: 20px;
+
+    font-size: 0.9rem;
+
+    font-weight: 600;
+}
+
+.skill-badge.matched {
+    background-color: #d1e7dd;
+
+    color: #198754;
+}
+
+.skill-badge.missing {
+    background-color: #f8d7da;
+
+    color: #dc3545;
+}
+
+
+/* =========================================================
+   LISTS
+========================================================= */
+
+.professional-list {
+    padding-left: 25px;
+}
+
+.professional-list li {
+    margin-bottom: 12px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   ADDITIONAL FEATURES
+========================================================= */
+
+.additional-features {
+    margin-top: 30px;
+}
+
+.action-card {
+    background-color: #ffffff;
+
+    padding: 30px;
+
+    margin-bottom: 25px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.action-card h2 {
+    margin-bottom: 20px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   COVER LETTER
+========================================================= */
+
+.cover-letter-text {
+    white-space: pre-wrap;
+
+    font-family:
+        "Segoe UI",
+        Tahoma,
+        Geneva,
+        Verdana,
+        sans-serif;
+
+    background-color: #f8faff;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   BOTTOM ACTIONS
+========================================================= */
+
+.bottom-actions {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 25px;
+
+    margin-bottom: 40px;
+}
+
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes sectionFadeIn {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .resume-header-card {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .header-ats-score {
+        width: auto;
+    }
+
+    .section-navigation {
+        padding: 15px;
+    }
+
+    .section-btn {
+        width: 100%;
+
+        text-align: left;
+    }
+
+    .analysis-card {
+        padding: 22px;
+    }
+
+    .big-score {
+        font-size: 3rem;
+    }
+
+    .bottom-actions {
+        flex-direction: column;
+    }
+
+    .bottom-actions .btn {
+        width: 100%;
+    }
+
+    .stat-number {
+        font-size: 1.6rem;
+    }
+
+    .dashboard-card {
+        margin-bottom: 20px;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+
+        line-height: 1.7;
+    }
+
+}
